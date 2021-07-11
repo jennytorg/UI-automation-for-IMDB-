@@ -4,7 +4,7 @@ import time
 from selenium.webdriver.common.action_chains import ActionChains
 
 
-class coming_soon:
+class coming_soon_imdb:
 
     header_new_movies = (By.CSS_SELECTOR, "h1[class='header'] a[class='newmovies']")
     tab_coming_soon = (By.CSS_SELECTOR, "#main div ul li.active a")
@@ -19,20 +19,20 @@ class coming_soon:
         self.driver = driver
 
     def get_header_title_new_mov(self,driver):
-        return driver.find_element(*coming_soon.header_new_movies)
+        return driver.find_element(*coming_soon_imdb.header_new_movies)
 
     def get_title_coming_soon(self,driver):
-        return driver.find_element(*coming_soon.tab_coming_soon)
+        return driver.find_element(*coming_soon_imdb.tab_coming_soon)
 
     def get_first_movie_name(self,driver):
-        return driver.find_element(*coming_soon.first_movie_name)
+        return driver.find_element(*coming_soon_imdb.first_movie_name)
 
     def get_add_to_watchlist_btn(self,driver):
-        return driver.find_element(*coming_soon.add_to_watchlist)
+        return driver.find_element(*coming_soon_imdb.add_to_watchlist)
 
 
 
-
+    # check if the coming soon page loaded
     def action_check_subtitles_page(self):
         
         time.sleep(2)
@@ -42,7 +42,7 @@ class coming_soon:
         assert sub_text == 'Coming Soon'
         time.sleep(2)
         
-    # grab the first movie name in the top, checks if the the button add to watchlist checked and if not, click on it 
+    # grab the first movie name in the top, checks if the button 'add to watchlist' checked and if not, click on it 
     def action02_get_first_movie_name_click_watchlist(self):
         
         time.sleep(2)

@@ -5,7 +5,7 @@ import time
 from selenium.webdriver.common.action_chains import ActionChains
 
 
-class edit_watchList:
+class edit_watchList_imdb:
 
 
     edit_form_title = (By.CLASS_NAME, "lister-edit-form")
@@ -30,31 +30,31 @@ class edit_watchList:
         self.driver = driver
 
     def get_edit_form(self,driver):
-        return driver.find_element(*edit_watchList.edit_form_title)#attr class 
+        return driver.find_element(*edit_watchList_imdb.edit_form_title)#attr class 
 
     def get_done_button(self,driver):
-        return driver.find_element(*edit_watchList.DONE)
+        return driver.find_element(*edit_watchList_imdb.DONE)
 
     def get_check_boxes(self,driver):
-        return driver.find_elements(*edit_watchList.check_boxes_path)
+        return driver.find_elements(*edit_watchList_imdb.check_boxes_path)
 
     def get_movie_titles(self,driver):
-        return driver.find_elements(*edit_watchList.movie_titles)
+        return driver.find_elements(*edit_watchList_imdb.movie_titles)
 
     def get_move_to(self,driver):
-        return driver.find_element(*edit_watchList.move_item)
+        return driver.find_element(*edit_watchList_imdb.move_item)
 
     def get_copy_to(self,driver):
-        return driver.find_element(*edit_watchList.copy_item)
+        return driver.find_element(*edit_watchList_imdb.copy_item)
 
     def get_delete(self,driver):
-        return driver.find_element(*edit_watchList.delete_item)
+        return driver.find_element(*edit_watchList_imdb.delete_item)
 
     def get_delete_popapp(self,driver):
-        return driver.find_element(*edit_watchList.delete_pop_app)
+        return driver.find_element(*edit_watchList_imdb.delete_pop_app)
 
     def get_delete_link(self,driver):
-        return driver.find_element(*edit_watchList.delete_link)
+        return driver.find_element(*edit_watchList_imdb.delete_link)
 
 
     def action_verify_edit_page(self):
@@ -82,6 +82,7 @@ class edit_watchList:
         #     else:
         #         print('unchecked - good')
         #         continue
+        
         dele = self.get_delete(self.driver).get_attribute('class')
         assert dele == 'flat-button disabled'
 

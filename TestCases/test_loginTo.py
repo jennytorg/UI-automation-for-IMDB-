@@ -4,7 +4,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import pytest
 import time
 
-from pageObjects_web.header import header_links
+from pageObjects_web.header import header_links__imdb
 from pageObjects_web.loginPage import login
 
 
@@ -30,7 +30,7 @@ class Test_imdb_login:
         driver.maximize_window()
         ##driver.get("https://www.imdb.com/")
         driver.implicitly_wait(10)
-        header_btn = header_links(driver)
+        header_btn = header_links__imdb(driver)
         login_process  = login(driver)
     
     @classmethod

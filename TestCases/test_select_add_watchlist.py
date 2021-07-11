@@ -4,9 +4,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 import pytest
 import time
 
-from pageObjects_web.header import header_links
+from pageObjects_web.header import header_links__imdb
 from pageObjects_web.loginPage import login
-from pageObjects_web.new_mov_coming_soon import coming_soon
+from pageObjects_web.new_mov_coming_soon import coming_soon_imdb
 from pageObjects_web.your_watch_list_page import watch_list
 
 
@@ -36,9 +36,9 @@ class Test_watchList_select_and_add:
         driver.maximize_window()
         ##driver.get("https://www.imdb.com/")
         driver.implicitly_wait(10)
-        header_btn = header_links(driver)
+        header_btn = header_links__imdb(driver)
         login_process  = login(driver)
-        coming_soon_list = coming_soon(driver)
+        coming_soon_list = coming_soon_imdb(driver)
         watch_list_page=watch_list(driver)
         
     

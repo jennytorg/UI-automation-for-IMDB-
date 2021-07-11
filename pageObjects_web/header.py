@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 import time
 
-class header_links:
+class header_links__imdb:
    
     menu = (By.ID,"imdbHeader-navDrawerOpen--desktop")
     watch_list = (By.XPATH, "//*[@id='imdbHeader']/div[2]/div[4]/a")
@@ -15,22 +15,22 @@ class header_links:
 
 
     def get_menu(self,driver):
-        return driver.find_element(*header_links.menu)
+        return driver.find_element(*header_links__imdb.menu)
 
     def get_watch_list(self,driver):
-        return driver.find_element(*header_links.watch_list)
+        return driver.find_element(*header_links__imdb.watch_list)
 
     def get_sign_in(self,driver):
-        return driver.find_element(*header_links.sign_in)
+        return driver.find_element(*header_links__imdb.sign_in)
 
     def get_home_page_icon(self,driver):
-        return driver.find_element(*header_links.home)
+        return driver.find_element(*header_links__imdb.home)
 
     def get_user_name_header(self,driver):
-        return driver.find_element(*header_links.account_name)
+        return driver.find_element(*header_links__imdb.account_name)
 
     def get_coming_soon(self,driver):
-        return driver.find_element(*header_links.menu_coming_soon)
+        return driver.find_element(*header_links__imdb.menu_coming_soon)
 
 
 

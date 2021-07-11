@@ -4,10 +4,10 @@ from webdriver_manager.chrome import ChromeDriverManager
 import pytest
 import time
 
-from pageObjects_web.header import header_links
+from pageObjects_web.header import header_links__imdb
 from pageObjects_web.loginPage import login
 from pageObjects_web.your_watch_list_page import watch_list
-from pageObjects_web.edit_your_watch_list import edit_watchList
+from pageObjects_web.edit_your_watch_list import edit_watchList_imdb
 
 
 from .Get_data_func import get_data_method
@@ -37,10 +37,10 @@ class Test_watchList_edit:
         driver.maximize_window()
         ##driver.get("https://www.imdb.com/")
         driver.implicitly_wait(10)
-        header_btn = header_links(driver)
+        header_btn = header_links__imdb(driver)
         login_process  = login(driver)
         watch_list_page=watch_list(driver)
-        edit_my_list = edit_watchList(driver)
+        edit_my_list = edit_watchList_imdb(driver)
 
     @classmethod
     def teardown_class(cls):
