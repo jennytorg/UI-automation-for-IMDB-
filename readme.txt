@@ -17,7 +17,7 @@ Prerequisites:
 
 Project structure:
 
-    - The files divided to Page Object moduls (heaader, sign in page,coming soon page,my watch list)
+    - The files divided to Page Object moduls (header, sign in page, coming soon page, my watch list)
     - Configuration file (for URL, user, password)
     - Test cases to run with pytest
 
